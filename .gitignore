@@ -1,4 +1,7 @@
 configs/
 patches/
 *.o
+*.orig
+*.rej
+config.h
 st
