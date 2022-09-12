@@ -33,7 +33,7 @@ char *vtiden = "\033[?6c";
 
 /* Kerning / character bounding-box multipliers */
 static float cwscale = 1.0;
-static float chscale = 1.0;
+static float chscale = 1.04;
 
 /*
  * word delimiter string
@@ -105,31 +105,31 @@ float alpha = 0.8;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
+	[0] = "#0d0d0d", // black
+	[1] = "#ff301b", // red
+	[2] = "#a0e521", // green
+	[3] = "#ffc620", // yellow
+	[4] = "#1ba6fa", // blue
+	[5] = "#8763b8", // magenta
+	[6] = "#21deef", // cyan
+	[7] = "#ebebeb", // gray
 
 	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+	[8]  = "#6d7070", // black
+	[9]  = "#ff4352", // red
+	[10] = "#b8e466", // green
+	[11] = "#ffd750", // yellow
+	[12] = "#1ba6fa", // blue
+	[13] = "#a578ea", // magenta
+	[14] = "#73fbf1", // cyan
+	[15] = "#fefef8", // white
 
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
 	"#cccccc",
 	"#555555",
-	"gray90", /* default foreground colour */
+	"#ebebeb", /* default foreground colour */
 	"black", /* default background colour */
 };
 
